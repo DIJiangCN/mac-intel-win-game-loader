@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mac Intel Windows Game Loader</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Free compatibility launcher</p>
+          <h1>Mac Intel Windows Game Loader</h1>
+        </div>
+        <button id="refreshBtn" class="ghost-btn">Refresh runtime</button>
+      </header>
+
+      <main class="content-grid">
+        <section class="panel drop-panel">
+          <div id="dropZone" class="drop-zone" tabindex="0">
+            <div class="drop-icon">⬇</div>
+            <h2>Drop your .exe here</h2>
+            <p>Drag a Windows game executable onto this window to launch it through Wine.</p>
+            <button id="selectExeBtn" class="primary-btn">Choose EXE</button>
+          </div>
+        </section>
+
+        <aside class="panel settings-panel">
+          <h3>Runtime settings</h3>
+
+          <div class="setting-row">
+            <label for="graphicsPreset">Graphics preset</label>
+            <select id="graphicsPreset">
+              <option value="balanced">Balanced</option>
+              <option value="quality">Quality</option>
+              <option value="low-latency">Low latency</option>
+            </select>
+          </div>
+
+          <div class="setting-row switch-row">
+            <span>Use dedicated prefix</span>
+            <input id="dedicatedPrefix" type="checkbox" checked />
+          </div>
+
+          <div class="setting-row switch-row">
+            <span>Enable DXVK-style compatibility</span>
+            <input id="dxvkMode" type="checkbox" />
+          </div>
+
+          <div class="setting-row switch-row">
+            <span>Run with virtual desktop</span>
+            <input id="virtualDesktop" type="checkbox" />
+          </div>
+
+          <div class="runtime-info-box">
+            <p class="label">Status</p>
+            <p id="runtimeStatus">Checking runtime...</p>
+          </div>
+        </aside>
+      </main>
+
+      <section class="panel log-panel">
+        <div class="log-header">
+          <h3>Launch log</h3>
+          <button id="clearLogBtn" class="ghost-btn small">Clear</button>
+        </div>
+        <div id="logOutput" class="log-output">
+          <p>Loader ready.</p>
+        </div>
+      </section>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

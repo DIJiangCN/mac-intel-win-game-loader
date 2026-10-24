@@ -2,9 +2,6 @@ node_modules/
 .DS_Store
 npm-debug.log*
 
-# Electron build output
 out/
 dist/
-
-# Local Wine prefixes
 .wine-prefixes/

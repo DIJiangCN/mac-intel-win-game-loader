@@ -1,0 +1,20 @@
+{
+  "name": "mac-intel-win-game-loader",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Free drag-and-drop Windows game loader for macOS Intel using Wine",
+  "main": "electron/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "check-env": "node scripts/check-env.js",
+    "install-wine": "bash scripts/install-wine.sh"
+  },
+  "dependencies": {
+    "electron": "^31.0.0"
+  },
+  "engines": {
+    "node": ">=18",
+    "npm": ">=9"
+  }
+}
